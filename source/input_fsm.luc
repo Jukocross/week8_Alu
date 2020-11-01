@@ -1,0 +1,126 @@
+module input_fsm(
+    input clk,  // clock
+    input rst,
+    input oneInput,
+    input zeroInput,
+    input nextValue,
+    input previousValue,
+    input enterNext,
+    output segValue[15],
+    output alufn_signal[6],
+    output out[16]
+  ) {
+  alu alu;
+  errorChecker aluChecker;
+  .clk(clk){
+   .rst(rst){
+     fsm testInput={A, B, ALUFN, OUT};
+     dff register_a[16](#INIT(0));
+     dff counter_a[4](#INIT(0));
+     dff register_b[16](#INIT(0));
+     dff counter_b[4](#INIT(0));
+     dff register_singal[6](#INIT(6b111111));
+     dff counter_signal[3](#INIT(0)); 
+      }
+  }
+
+  always {
+    segValue = 15h0000;
+    register_a.d = register_a.q;
+    register_b.d = register_b.q;
+    register_singal.d = register_singal.q;
+    counter_a.d = counter_a.q;
+    counter_b.d = counter_b.q;
+    counter_signal.d = counter_signal.q;
+    alu.a = 16h00;
+    alu.b = 16h00;
+    alu.alufn_signal = 6b000000;
+    out = alu.out;
+    aluChecker.alufn_signal = register_singal.q;
+    alufn_signal = register_singal.q;
+    case(testInput.q){
+      testInput.A :
+              if (oneInput == 1){
+              register_a.d[counter_a.q] = 1;
+          }
+              if (zeroInput == 1){
+              register_a.d[counter_a.q] = 0;
+          }
+              if (nextValue == 1){
+              counter_a.d = counter_a.q + 1;
+          }
+              if (previousValue == 1) {
+              counter_a.d = counter_a.q - 1;
+        }
+              segValue[14:10] = 5h0A;
+              segValue[9:5] = counter_a.q;
+              segValue[4:0] = register_a.q[counter_a.q];
+              out = register_a.q;
+              if (enterNext == 1){
+                testInput.d = testInput.B;
+          }
+      testInput.B :
+              if (oneInput == 1){
+              register_b.d[counter_b.q] = 1;
+          }
+              if (zeroInput == 1){
+              register_b.d[counter_b.q] = 0;
+          }
+              if (nextValue == 1){
+              counter_b.d = counter_b.q + 1;
+          }
+              if (previousValue == 1) {
+              counter_b.d = counter_b.q - 1;
+        }
+              segValue[14:10] = 5h0B;
+              segValue[9:5] = counter_b.q;
+              segValue[4:0] = register_b.q[counter_b.q];
+              out = register_b.q;
+              if (enterNext == 1){
+                testInput.d = testInput.ALUFN;
+          }
+      testInput.ALUFN :
+              if (oneInput == 1){
+              register_singal.d[counter_signal.q] = 1;
+          }
+              if (zeroInput == 1){
+              register_singal.d[counter_signal.q] = 0;
+          }
+              if (nextValue == 1){
+              counter_signal.d = counter_signal.q + 1;
+          }
+              if (previousValue == 1) {
+              counter_signal.d = counter_signal.q - 1;
+        }
+              segValue[14:10] = 5h05;
+              segValue[9:5] = counter_signal.q;
+              segValue[4:0] = register_singal.q[counter_signal.q];
+              alufn_signal = register_singal.q;
+              if (enterNext == 1){
+                testInput.d = testInput.OUT;
+          }
+      testInput.OUT:
+              alu.a = register_a.q;
+              alu.b = register_b.q;
+              alu.alufn_signal = register_singal.q;
+              out = alu.out;
+              aluChecker.alufn_signal = register_singal.q;
+              segValue[14:10] = 5h00;
+              segValue[9:5] = 5h11;
+              segValue[4:0] = 5h12;
+              if (aluChecker.out == 1){
+              out = 16h0000;
+              alufn_signal = 6b111111;
+              segValue[14:10] = 5h0E;
+              segValue[9:5] = 5h10;
+              segValue[4:0] = 5h10;
+          }
+              if (enterNext == 1){
+                testInput.d = testInput.A;
+          }
+      default:
+              testInput.d = testInput.A;      
+                          
+    }
+  }
+}

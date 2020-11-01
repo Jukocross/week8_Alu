@@ -1,0 +1,47 @@
+module button_controller (
+    input clk,  // clock
+    input io_button[5],
+    output oneInput,
+    output zeroInput,
+    output nextValueInput,
+    output previousValueInput,
+    output enterInput
+    
+  ) {
+  .clk(clk){
+    button_conditioner up_button;
+    edge_detector up_ed(#RISE(1), #FALL(0));
+    button_conditioner down_button;
+    edge_detector down_ed(#RISE(1), #FALL(0));
+    button_conditioner left_button;
+    edge_detector left_ed(#RISE(1), #FALL(0));
+    button_conditioner right_button;
+    edge_detector right_ed(#RISE(1), #FALL(0));
+    button_conditioner middle_button;
+    edge_detector middle_ed(#RISE(1), #FALL(0));
+    }
+  
+
+  always {
+    up_button.in = io_button[0];
+    up_ed.in = up_button.out;
+    oneInput = up_ed.out;
+    
+    down_button.in = io_button[2];
+    down_ed.in = down_button.out;
+    nextValueInput = down_ed.out;
+    
+    left_button.in = io_button[3];
+    left_ed.in = left_button.out;
+    zeroInput = left_ed.out;
+    
+    right_button.in = io_button[4];
+    right_ed.in = right_button.out;
+    enterInput = right_ed.out;
+    
+    middle_button.in = io_button[1];
+    middle_ed.in = middle_button.out;
+    previousValueInput = middle_ed.out;
+    
+  }
+}
