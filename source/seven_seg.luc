@@ -17,7 +17,7 @@ module seven_seg (
       h09: segs = 8b10010000;//9
       h0A: segs = 8b10001000;//A
       h0B: segs = 8b10000011;//B
-      h0C: segs = 8b10000110;//C
+      h0C: segs = 8b11000110;//C
       h0D: segs = 8b10100001;//D
       h0E: segs = 8b10000110;//The input for seg which represent E
       h0F: segs = 8b10001110;//The input for seg which represent F

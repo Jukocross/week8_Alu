@@ -9,6 +9,7 @@ module au_top_0 (
     input rst_n,
     input usb_rx,
     input [4:0] io_button,
+    input [15:0] io_dip,
     output reg usb_tx,
     output reg [7:0] io_seg,
     output reg [3:0] io_sel,
@@ -19,6 +20,7 @@ module au_top_0 (
   
   reg rst;
   reg [14:0] segValue;
+  reg [15:0] outChecker;
   
   wire [1-1:0] M_reset_cond_out;
   reg [1-1:0] M_reset_cond_in;
@@ -56,6 +58,7 @@ module au_top_0 (
   reg [1-1:0] M_system_fsm_nextValue;
   reg [1-1:0] M_system_fsm_previousValue;
   reg [1-1:0] M_system_fsm_enterNext;
+  reg [16-1:0] M_system_fsm_outChecker;
   input_fsm_4 system_fsm (
     .clk(clk),
     .rst(rst),
@@ -64,6 +67,7 @@ module au_top_0 (
     .nextValue(M_system_fsm_nextValue),
     .previousValue(M_system_fsm_previousValue),
     .enterNext(M_system_fsm_enterNext),
+    .outChecker(M_system_fsm_outChecker),
     .segValue(M_system_fsm_segValue),
     .alufn_signal(M_system_fsm_alufn_signal),
     .out(M_system_fsm_out)
@@ -87,11 +91,14 @@ module au_top_0 (
     rst = M_reset_cond_out;
     usb_tx = usb_rx;
     M_buttons_io_button = io_button;
+    outChecker[8+7-:8] = io_dip[8+7-:8];
+    outChecker[0+7-:8] = io_dip[0+7-:8];
     M_system_fsm_oneInput = M_buttons_oneInput;
     M_system_fsm_zeroInput = M_buttons_zeroInput;
     M_system_fsm_nextValue = M_buttons_nextValueInput;
     M_system_fsm_enterNext = M_buttons_enterInput;
     M_system_fsm_previousValue = M_buttons_previousValueInput;
+    M_system_fsm_outChecker = outChecker;
     segValue = M_system_fsm_segValue;
     io_led[16+0+5-:6] = M_system_fsm_alufn_signal;
     io_led[8+7-:8] = M_system_fsm_out[8+7-:8];

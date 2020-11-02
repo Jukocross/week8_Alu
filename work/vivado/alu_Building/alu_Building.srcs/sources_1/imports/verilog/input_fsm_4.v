@@ -12,6 +12,7 @@ module input_fsm_4 (
     input nextValue,
     input previousValue,
     input enterNext,
+    input [15:0] outChecker,
     output reg [14:0] segValue,
     output reg [5:0] alufn_signal,
     output reg [15:0] out
@@ -148,12 +149,17 @@ module input_fsm_4 (
         segValue[10+4-:5] = 5'h00;
         segValue[5+4-:5] = 5'h11;
         segValue[0+4-:5] = 5'h12;
+        if (M_alu_out != outChecker) begin
+          segValue[10+4-:5] = 5'h0e;
+          segValue[5+4-:5] = 5'h10;
+          segValue[0+4-:5] = 5'h01;
+        end
         if (M_aluChecker_out == 1'h1) begin
           out = 16'h0000;
           alufn_signal = 6'h3f;
           segValue[10+4-:5] = 5'h0e;
           segValue[5+4-:5] = 5'h10;
-          segValue[0+4-:5] = 5'h10;
+          segValue[0+4-:5] = 5'h00;
         end
         if (enterNext == 1'h1) begin
           M_testInput_d = A_testInput;

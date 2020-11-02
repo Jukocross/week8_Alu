@@ -6,6 +6,7 @@ module input_fsm(
     input nextValue,
     input previousValue,
     input enterNext,
+    input outChecker[16],
     output segValue[15],
     output alufn_signal[6],
     output out[16]
@@ -108,12 +109,16 @@ module input_fsm(
               segValue[14:10] = 5h00;
               segValue[9:5] = 5h11;
               segValue[4:0] = 5h12;
-              if (aluChecker.out == 1){
+              if (alu.out != outChecker){
+              segValue[14:10] = 5h0E;
+              segValue[9:5] = 5h10;
+              segValue[4:0] = 5h01;
+          }   if (aluChecker.out == 1){
               out = 16h0000;
               alufn_signal = 6b111111;
               segValue[14:10] = 5h0E;
               segValue[9:5] = 5h10;
-              segValue[4:0] = 5h10;
+              segValue[4:0] = 5h00;
           }
               if (enterNext == 1){
                 testInput.d = testInput.A;
