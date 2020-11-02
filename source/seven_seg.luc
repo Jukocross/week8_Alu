@@ -24,6 +24,7 @@ module seven_seg (
       h10: segs = 8b10101111;//The input for seg whichb represent r
       h11: segs = 8b11100011;//The input for seg whichb represent u
       h12: segs = 8b10000111;//The input for seg whichb represent t
+      h13: segs = 8b10001001;//The input for seg which represent H
       default: segs = 8hFF;}// The default is set to 0
   }
 }

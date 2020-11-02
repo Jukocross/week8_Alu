@@ -40,12 +40,13 @@ module input_fsm_4 (
     .out(M_aluChecker_out)
   );
   
-  localparam A_testInput = 2'd0;
-  localparam B_testInput = 2'd1;
-  localparam ALUFN_testInput = 2'd2;
-  localparam OUT_testInput = 2'd3;
+  localparam A_testInput = 3'd0;
+  localparam B_testInput = 3'd1;
+  localparam ALUFN_testInput = 3'd2;
+  localparam OUT_testInput = 3'd3;
+  localparam OUTCHECK_testInput = 3'd4;
   
-  reg [1:0] M_testInput_d, M_testInput_q = A_testInput;
+  reg [2:0] M_testInput_d, M_testInput_q = A_testInput;
   reg [15:0] M_register_a_d, M_register_a_q = 1'h0;
   reg [3:0] M_counter_a_d, M_counter_a_q = 1'h0;
   reg [15:0] M_register_b_d, M_register_b_q = 1'h0;
@@ -149,6 +150,29 @@ module input_fsm_4 (
         segValue[10+4-:5] = 5'h00;
         segValue[5+4-:5] = 5'h11;
         segValue[0+4-:5] = 5'h12;
+        if (M_aluChecker_out == 1'h1) begin
+          out = 16'h0000;
+          alufn_signal = 6'h3f;
+          segValue[10+4-:5] = 5'h0e;
+          segValue[5+4-:5] = 5'h10;
+          segValue[0+4-:5] = 5'h00;
+        end
+        if (nextValue == 1'h1) begin
+          M_testInput_d = OUTCHECK_testInput;
+        end
+        if (enterNext == 1'h1) begin
+          M_testInput_d = A_testInput;
+        end
+      end
+      OUTCHECK_testInput: begin
+        M_alu_a = M_register_a_q;
+        M_alu_b = M_register_b_q;
+        M_alu_alufn_signal = M_register_singal_q;
+        out = M_alu_out;
+        M_aluChecker_alufn_signal = M_register_singal_q;
+        segValue[10+4-:5] = 5'h0c;
+        segValue[5+4-:5] = 5'h13;
+        segValue[0+4-:5] = 5'h0e;
         if (M_alu_out != outChecker) begin
           segValue[10+4-:5] = 5'h0e;
           segValue[5+4-:5] = 5'h10;
@@ -160,6 +184,9 @@ module input_fsm_4 (
           segValue[10+4-:5] = 5'h0e;
           segValue[5+4-:5] = 5'h10;
           segValue[0+4-:5] = 5'h00;
+        end
+        if (nextValue == 1'h1) begin
+          M_testInput_d = OUT_testInput;
         end
         if (enterNext == 1'h1) begin
           M_testInput_d = A_testInput;
