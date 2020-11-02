@@ -1,6 +1,6 @@
 module alufn_signal_fsm(
     input clk,  // clock
-    input reset,
+    input rst,
     output out[6] // alufn signals
   ) {
   
@@ -10,7 +10,7 @@ module alufn_signal_fsm(
 
   always {
   
-    if (reset & 1){
+    if (rst & 1){
         testAluFsm.d = testAluFsm.ADD;
     }
     else{

@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tftg256-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1880
+INFO: [Synth 8-7075] Helper process launched with PID 992
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'au_top_0' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/au_top_0.v:7]
 INFO: [Synth 8-6157] synthesizing module 'reset_conditioner_1' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/reset_conditioner_1.v:11]
@@ -47,48 +47,77 @@ INFO: [Synth 8-6157] synthesizing module 'counter_3' [C:/Users/YK/Desktop/School
 	Parameter MAX_VALUE bound to: 11'b01111111111 
 INFO: [Synth 8-6155] done synthesizing module 'counter_3' (6#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/counter_3.v:14]
 INFO: [Synth 8-6157] synthesizing module 'input_fsm_4' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/input_fsm_4.v:7]
-	Parameter A_testInput bound to: 3'b000 
-	Parameter B_testInput bound to: 3'b001 
-	Parameter ALUFN_testInput bound to: 3'b010 
-	Parameter OUT_testInput bound to: 3'b011 
-	Parameter OUTCHECK_testInput bound to: 3'b100 
-INFO: [Synth 8-6157] synthesizing module 'alu_9' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_9.v:7]
-INFO: [Synth 8-6157] synthesizing module 'adderUnit_13' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_13.v:7]
-INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_13.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'adderUnit_13' (7#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_13.v:7]
-INFO: [Synth 8-6157] synthesizing module 'booleanUnit_14' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/booleanUnit_14.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'booleanUnit_14' (8#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/booleanUnit_14.v:7]
-INFO: [Synth 8-6157] synthesizing module 'shifterUnit_15' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/shifterUnit_15.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'shifterUnit_15' (9#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/shifterUnit_15.v:7]
-INFO: [Synth 8-6157] synthesizing module 'compareUnit_16' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/compareUnit_16.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'compareUnit_16' (10#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/compareUnit_16.v:7]
-INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_9.v:96]
-INFO: [Synth 8-6155] done synthesizing module 'alu_9' (11#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_9.v:7]
-INFO: [Synth 8-6157] synthesizing module 'errorChecker_10' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_10.v:7]
-INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_10.v:16]
-INFO: [Synth 8-6155] done synthesizing module 'errorChecker_10' (12#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_10.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'input_fsm_4' (13#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/input_fsm_4.v:7]
+	Parameter A_testInput bound to: 2'b00 
+	Parameter B_testInput bound to: 2'b01 
+	Parameter ALUFN_testInput bound to: 2'b10 
+	Parameter OUT_testInput bound to: 2'b11 
+INFO: [Synth 8-6157] synthesizing module 'errorChecker_9' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_9.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_9.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'errorChecker_9' (7#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_9.v:7]
+INFO: [Synth 8-6157] synthesizing module 'out_state_fsm_10' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/out_state_fsm_10.v:7]
+	Parameter OUT_output_status bound to: 2'b00 
+	Parameter MANUAL_output_status bound to: 2'b01 
+	Parameter AUTO_output_status bound to: 2'b10 
+INFO: [Synth 8-6157] synthesizing module 'alu_13' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_13.v:7]
+INFO: [Synth 8-6157] synthesizing module 'adderUnit_16' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_16.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_16.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'adderUnit_16' (8#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_16.v:7]
+INFO: [Synth 8-6157] synthesizing module 'booleanUnit_17' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/booleanUnit_17.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'booleanUnit_17' (9#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/booleanUnit_17.v:7]
+INFO: [Synth 8-6157] synthesizing module 'shifterUnit_18' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/shifterUnit_18.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'shifterUnit_18' (10#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/shifterUnit_18.v:7]
+INFO: [Synth 8-6157] synthesizing module 'compareUnit_19' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/compareUnit_19.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'compareUnit_19' (11#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/compareUnit_19.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_13.v:96]
+INFO: [Synth 8-6155] done synthesizing module 'alu_13' (12#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_13.v:7]
+INFO: [Synth 8-6157] synthesizing module 'counter_14' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/counter_14.v:14]
+	Parameter SIZE bound to: 1'b1 
+	Parameter DIV bound to: 5'b11010 
+	Parameter TOP bound to: 1'b0 
+	Parameter UP bound to: 1'b1 
+	Parameter MAX_VALUE bound to: 27'b011111111111111111111111111 
+INFO: [Synth 8-6155] done synthesizing module 'counter_14' (13#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/counter_14.v:14]
+INFO: [Synth 8-6157] synthesizing module 'alufn_signal_fsm_15' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alufn_signal_fsm_15.v:7]
+	Parameter ADD_testAluFsm bound to: 4'b0000 
+	Parameter SUB_testAluFsm bound to: 4'b0001 
+	Parameter AND_testAluFsm bound to: 4'b0010 
+	Parameter OR_testAluFsm bound to: 4'b0011 
+	Parameter XOR_testAluFsm bound to: 4'b0100 
+	Parameter A_testAluFsm bound to: 4'b0101 
+	Parameter SHL_testAluFsm bound to: 4'b0110 
+	Parameter SHR_testAluFsm bound to: 4'b0111 
+	Parameter SRA_testAluFsm bound to: 4'b1000 
+	Parameter CMPEQ_testAluFsm bound to: 4'b1001 
+	Parameter CMPLT_testAluFsm bound to: 4'b1010 
+	Parameter CMPLE_testAluFsm bound to: 4'b1011 
+	Parameter MUL_testAluFsm bound to: 4'b1100 
+	Parameter DIV_testAluFsm bound to: 4'b1101 
+	Parameter ERROR_testAluFsm bound to: 4'b1110 
+INFO: [Synth 8-6155] done synthesizing module 'alufn_signal_fsm_15' (14#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alufn_signal_fsm_15.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'out_state_fsm_10' (15#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/out_state_fsm_10.v:7]
+INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/input_fsm_4.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'input_fsm_4' (16#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/input_fsm_4.v:7]
 INFO: [Synth 8-6157] synthesizing module 'seven_seg_select_digit_5' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_digit_5.v:7]
 INFO: [Synth 8-226] default block is never used [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_digit_5.v:17]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg_select_digit_5' (14#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_digit_5.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_select_digit_5' (17#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_digit_5.v:7]
 INFO: [Synth 8-6157] synthesizing module 'seven_seg_select_value_6' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_value_6.v:7]
 INFO: [Synth 8-6157] synthesizing module 'seven_seg_11' [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_11.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg_11' (15#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_11.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg_select_value_6' (16#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_value_6.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (17#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/au_top_0.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_11' (18#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_11.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_select_value_6' (19#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_value_6.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'au_top_0' (20#1) [C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/au_top_0.v:7]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1013.109 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -101,40 +130,68 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/au_top_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1013.109 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tftg256-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'M_testAluFsm_q_reg' in module 'alufn_signal_fsm_15'
+INFO: [Synth 8-802] inferred FSM for state register 'M_output_status_q_reg' in module 'out_state_fsm_10'
 INFO: [Synth 8-802] inferred FSM for state register 'M_testInput_q_reg' in module 'input_fsm_4'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-             A_testInput |                              000 |                              000
-             B_testInput |                              001 |                              001
-         ALUFN_testInput |                              010 |                              010
-           OUT_testInput |                              011 |                              011
-      OUTCHECK_testInput |                              100 |                              100
+          ADD_testAluFsm |                   00000000000001 |                             0000
+          SUB_testAluFsm |                   00000000000010 |                             0001
+          AND_testAluFsm |                   00000000000100 |                             0010
+           OR_testAluFsm |                   00000000001000 |                             0011
+          XOR_testAluFsm |                   00000000010000 |                             0100
+            A_testAluFsm |                   00000000100000 |                             0101
+          SHL_testAluFsm |                   00000001000000 |                             0110
+          SHR_testAluFsm |                   00000010000000 |                             0111
+          SRA_testAluFsm |                   00000100000000 |                             1000
+        CMPEQ_testAluFsm |                   00001000000000 |                             1001
+        CMPLT_testAluFsm |                   00010000000000 |                             1010
+        CMPLE_testAluFsm |                   00100000000000 |                             1011
+          MUL_testAluFsm |                   01000000000000 |                             1100
+        ERROR_testAluFsm |                   10000000000000 |                             1110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'M_testAluFsm_q_reg' using encoding 'one-hot' in module 'alufn_signal_fsm_15'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+       OUT_output_status |                               00 |                               00
+    MANUAL_output_status |                               01 |                               01
+      AUTO_output_status |                               10 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'M_output_status_q_reg' using encoding 'sequential' in module 'out_state_fsm_10'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+             A_testInput |                               00 |                               00
+             B_testInput |                               01 |                               01
+         ALUFN_testInput |                               10 |                               10
+           OUT_testInput |                               11 |                               11
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'M_testInput_q_reg' using encoding 'sequential' in module 'input_fsm_4'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -155,22 +212,24 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input   16 Bit        Muxes := 6     
-	   4 Input   16 Bit        Muxes := 3     
-	   5 Input   16 Bit        Muxes := 5     
-	   5 Input   15 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 7     
+	   4 Input   16 Bit        Muxes := 8     
+	   2 Input   15 Bit        Muxes := 1     
+	   4 Input   15 Bit        Muxes := 1     
 	   2 Input   14 Bit        Muxes := 1     
 	   3 Input   14 Bit        Muxes := 1     
 	   4 Input    8 Bit        Muxes := 1     
+	  14 Input    6 Bit        Muxes := 1     
+	   3 Input    6 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 3     
-	   5 Input    6 Bit        Muxes := 3     
+	   4 Input    6 Bit        Muxes := 3     
 	   4 Input    5 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
-	   5 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 2     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 4     
+	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    1 Bit        Muxes := 3     
-	   4 Input    1 Bit        Muxes := 1     
-	   5 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -186,10 +245,10 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP system_fsm/alu/out0, operation Mode is: A*B.
-DSP Report: operator system_fsm/alu/out0 is absorbed into DSP system_fsm/alu/out0.
+DSP Report: Generating DSP system_fsm/out_fsm/alu/out0, operation Mode is: A*B.
+DSP Report: operator system_fsm/out_fsm/alu/out0 is absorbed into DSP system_fsm/out_fsm/alu/out0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -208,7 +267,7 @@ DSP: Preliminary Mapping	Report (see note below)
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|alu_9       | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|alu_13      | A*B         | 16     | 16     | -      | -      | 32     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -219,19 +278,19 @@ Finished ROM, RAM, DSP and Shift Register Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1012.625 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1013.109 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1088.902 ; gain = 76.277
+Finished Timing Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1101.582 ; gain = 88.473
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:50 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -249,37 +308,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished IO Insertion : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -296,42 +355,42 @@ Report Cell Usage:
 |      |Cell    |Count |
 +------+--------+------+
 |1     |BUFG    |     1|
-|2     |CARRY4  |    34|
+|2     |CARRY4  |    41|
 |3     |DSP48E1 |     1|
-|4     |LUT1    |    19|
-|5     |LUT2    |    28|
-|6     |LUT3    |    15|
-|7     |LUT4    |    85|
-|8     |LUT5    |    80|
-|9     |LUT6    |   310|
-|10    |MUXF7   |     2|
-|11    |MUXF8   |     1|
-|12    |FDRE    |   173|
+|4     |LUT1    |    21|
+|5     |LUT2    |    27|
+|6     |LUT3    |    76|
+|7     |LUT4    |    80|
+|8     |LUT5    |    66|
+|9     |LUT6    |   316|
+|10    |MUXF7   |     6|
+|11    |MUXF8   |     2|
+|12    |FDRE    |   217|
 |13    |FDSE    |    10|
 |14    |IBUF    |    24|
 |15    |OBUF    |    35|
 |16    |OBUFT   |     2|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:43 ; elapsed = 00:00:52 . Memory (MB): peak = 1089.820 ; gain = 77.195
-Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1089.820 ; gain = 77.195
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 1102.594 ; gain = 89.484
+Synthesis Optimization Complete : Time (s): cpu = 00:00:56 ; elapsed = 00:00:57 . Memory (MB): peak = 1102.594 ; gain = 89.484
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1089.820 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1110.594 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1089.820 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1110.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-55 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+66 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 1089.820 ; gain = 77.195
+synth_design: Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1110.594 ; gain = 97.484
 INFO: [Common 17-1381] The checkpoint 'C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.runs/synth_1/au_top_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file au_top_0_utilization_synth.rpt -pb au_top_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov  2 16:05:33 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Nov  3 02:36:52 2020...

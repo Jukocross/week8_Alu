@@ -12,6 +12,7 @@
     <src>alufn_signal_fsm.luc</src>
     <src>alu.luc</src>
     <src>seven_seg_select_value.luc</src>
+    <src>out_state_fsm.luc</src>
     <src>seven_seg_select_digit.luc</src>
     <src>seven_seg.luc</src>
     <src>shifterUnit.luc</src>

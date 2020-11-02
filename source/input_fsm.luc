@@ -11,17 +11,17 @@ module input_fsm(
     output alufn_signal[6],
     output out[16]
   ) {
-  alu alu;
   errorChecker aluChecker;
   .clk(clk){
    .rst(rst){
-     fsm testInput={A, B, ALUFN, OUT, OUTCHECK};
+     out_state_fsm out_fsm;
+     fsm testInput={A, B, ALUFN, OUT};
      dff register_a[16](#INIT(0));
      dff counter_a[4](#INIT(0));
      dff register_b[16](#INIT(0));
      dff counter_b[4](#INIT(0));
      dff register_singal[6](#INIT(6b111111));
-     dff counter_signal[3](#INIT(0)); 
+     dff counter_signal[3](#INIT(0));
       }
   }
 
@@ -33,10 +33,13 @@ module input_fsm(
     counter_a.d = counter_a.q;
     counter_b.d = counter_b.q;
     counter_signal.d = counter_signal.q;
-    alu.a = 16h00;
-    alu.b = 16h00;
-    alu.alufn_signal = 6b000000;
-    out = alu.out;
+    out_fsm.a = 16h00;
+    out_fsm.b = 16h00;
+    out_fsm.alufn_signal_input = register_singal.q;
+    out_fsm.outChecker = outChecker;
+    out_fsm.nextValue = nextValue;
+    out_fsm.previousValue = previousValue;
+    out = out_fsm.out;
     aluChecker.alufn_signal = register_singal.q;
     alufn_signal = register_singal.q;
     case(testInput.q){
@@ -101,14 +104,16 @@ module input_fsm(
                 testInput.d = testInput.OUT;
           }
       testInput.OUT:
-              alu.a = register_a.q;
-              alu.b = register_b.q;
-              alu.alufn_signal = register_singal.q;
-              out = alu.out;
-              aluChecker.alufn_signal = register_singal.q;
-              segValue[14:10] = 5h00;
-              segValue[9:5] = 5h11;
-              segValue[4:0] = 5h12;
+              out_fsm.a = register_a.q;
+              out_fsm.b = register_b.q;
+              out_fsm.alufn_signal_input = register_singal.q;
+              out_fsm.outChecker = outChecker;
+              out_fsm.nextValue = nextValue;
+              out_fsm.previousValue = previousValue;
+              out = out_fsm.out;
+              aluChecker.alufn_signal = out_fsm.alufn_signal;
+              segValue = out_fsm.segValue;
+              alufn_signal = out_fsm.alufn_signal;
               if (aluChecker.out == 1){
               out = 16h0000;
               alufn_signal = 6b111111;
@@ -116,39 +121,9 @@ module input_fsm(
               segValue[9:5] = 5h10;
               segValue[4:0] = 5h00;
           }
-              if (nextValue == 1){
-              testInput.d = testInput.OUTCHECK;
-          }
               if (enterNext == 1){
                 testInput.d = testInput.A;
-          }
-      testInput.OUTCHECK:
-              alu.a = register_a.q;
-              alu.b = register_b.q;
-              alu.alufn_signal = register_singal.q;
-              out = alu.out;
-              aluChecker.alufn_signal = register_singal.q;
-              segValue[14:10] = 5h0C;
-              segValue[9:5] = 5h13;
-              segValue[4:0] = 5h0E;
-              if (alu.out != outChecker){
-              segValue[14:10] = 5h0E;
-              segValue[9:5] = 5h10;
-              segValue[4:0] = 5h01;
-          }
-              if (aluChecker.out == 1){
-              out = 16h0000;
-              alufn_signal = 6b111111;
-              segValue[14:10] = 5h0E;
-              segValue[9:5] = 5h10;
-              segValue[4:0] = 5h00;
-          }
-              if (nextValue == 1){
-                testInput.d = testInput.OUT;
-        }
-              if (enterNext == 1){
-                testInput.d = testInput.A;
-          }
+          }             
       default:
               testInput.d = testInput.A;      
                           

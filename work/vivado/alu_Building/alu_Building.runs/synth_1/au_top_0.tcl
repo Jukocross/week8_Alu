@@ -84,22 +84,25 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_13.v}
-  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_9.v}
-  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/booleanUnit_14.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/adderUnit_16.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alu_13.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/alufn_signal_fsm_15.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/booleanUnit_17.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/button_conditioner_7.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/button_controller_2.v}
-  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/compareUnit_16.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/compareUnit_19.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/counter_14.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/counter_3.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/edge_detector_8.v}
-  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_10.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/errorChecker_9.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/input_fsm_4.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/out_state_fsm_10.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/pipeline_12.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/reset_conditioner_1.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_11.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_digit_5.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/seven_seg_select_value_6.v}
-  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/shifterUnit_15.v}
+  {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/shifterUnit_18.v}
   {C:/Users/YK/Desktop/School/50.002 Comp Struc/Alchitry/alu_Building/work/vivado/alu_Building/alu_Building.srcs/sources_1/imports/verilog/au_top_0.v}
 }
 OPTRACE "Adding files" END { }
