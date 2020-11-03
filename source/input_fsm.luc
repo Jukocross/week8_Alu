@@ -99,6 +99,7 @@ module input_fsm(
               segValue[14:10] = 5h05;
               segValue[9:5] = counter_signal.q;
               segValue[4:0] = register_singal.q[counter_signal.q];
+              out = 16h0000;
               alufn_signal = register_singal.q;
               if (enterNext == 1){
                 testInput.d = testInput.OUT;

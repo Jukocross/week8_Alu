@@ -147,6 +147,7 @@ module input_fsm_4 (
         segValue[10+4-:5] = 5'h05;
         segValue[5+4-:5] = M_counter_signal_q;
         segValue[0+4-:5] = M_register_singal_q[(M_counter_signal_q)*1+0-:1];
+        out = 16'h0000;
         alufn_signal = M_register_singal_q;
         if (enterNext == 1'h1) begin
           M_testInput_d = OUT_testInput;

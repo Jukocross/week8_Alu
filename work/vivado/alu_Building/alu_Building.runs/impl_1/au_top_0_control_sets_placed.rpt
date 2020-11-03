@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
-| Date         : Tue Nov  3 02:37:51 2020
+| Date         : Tue Nov  3 22:14:04 2020
 | Host         : LAPTOP-AHOKB06N running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file au_top_0_control_sets_placed.rpt
 | Design       : au_top_0
@@ -60,10 +60,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              31 |           13 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              88 |           35 |
+| No           | Yes                   | No                     |              88 |           33 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             108 |           27 |
+| Yes          | Yes                   | No                     |             108 |           29 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -75,15 +75,15 @@ Table of Contents
 +---------------------------------------+---------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
 |  clk_IBUF_BUFG                        |                                             | reset_cond/M_reset_cond_in                   |                2 |              4 |         2.00 |
 |  clk_IBUF_BUFG                        | system_fsm/M_counter_b_d                    | reset_cond/Q[0]                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                        | system_fsm/M_counter_a_d                    | reset_cond/Q[0]                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                        | system_fsm/M_counter_a_d                    | reset_cond/Q[0]                              |                3 |              4 |         1.33 |
 |  system_fsm/out_fsm/slowclock_fsm/CLK |                                             |                                              |                4 |             14 |         3.50 |
 |  clk_IBUF_BUFG                        |                                             |                                              |                9 |             17 |         1.89 |
+|  clk_IBUF_BUFG                        | buttons/down_button/M_ctr_q[0]_i_2__0_n_0   | buttons/down_button/sync/M_pipe_q_reg[1]_0   |                5 |             20 |         4.00 |
 |  clk_IBUF_BUFG                        | buttons/left_button/M_ctr_q[0]_i_2__1_n_0   | buttons/left_button/sync/M_pipe_q_reg[1]_0   |                5 |             20 |         4.00 |
 |  clk_IBUF_BUFG                        | buttons/middle_button/M_ctr_q[0]_i_2__3_n_0 | buttons/middle_button/sync/M_pipe_q_reg[1]_0 |                5 |             20 |         4.00 |
 |  clk_IBUF_BUFG                        | buttons/right_button/M_ctr_q[0]_i_2__2_n_0  | buttons/right_button/sync/M_pipe_q_reg[1]_0  |                5 |             20 |         4.00 |
 |  clk_IBUF_BUFG                        | buttons/up_button/sel                       | buttons/up_button/sync/clear                 |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG                        | buttons/down_button/M_ctr_q[0]_i_2__0_n_0   | buttons/down_button/sync/M_pipe_q_reg[1]_0   |                5 |             20 |         4.00 |
-|  clk_IBUF_BUFG                        |                                             | reset_cond/Q[0]                              |               33 |             84 |         2.55 |
+|  clk_IBUF_BUFG                        |                                             | reset_cond/Q[0]                              |               31 |             84 |         2.71 |
 +---------------------------------------+---------------------------------------------+----------------------------------------------+------------------+----------------+--------------+
 
 
