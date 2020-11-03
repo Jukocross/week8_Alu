@@ -1,0 +1,72 @@
+module out_state_fsm (
+    input clk,  // clock
+    input rst,  // reset
+    input a[16],
+    input b[16],
+    input alufn_signal_input[6],
+    input outChecker[16],
+    input nextValue,
+    input previousValue,
+    output alufn_signal[6],
+    output segValue[15],
+    output out[16]
+  ) {
+  alu alu;
+  counter slowclock_fsm(#SIZE(1), #DIV(26), .clk(clk), .rst(rst));
+  alufn_signal_fsm alufn_fsm(.clk(slowclock_fsm.value), .rst(rst));
+  .clk(clk){
+      fsm output_status={OUT, MANUAL, AUTO};
+    }
+
+  always {
+    alu.a = a;
+    alu.b = b;
+    alu.alufn_signal = alufn_signal_input;
+    out = alu.out;
+    output_status.d = output_status.q;
+    segValue = 15h0000;
+    alufn_signal = alufn_signal_input;
+    case(output_status.q){
+      output_status.OUT:
+        segValue[14:10] = 5h00;
+        segValue[9:5] = 5h11;
+        segValue[4:0] = 5h12;
+        if (nextValue == 1){
+            output_status.d = output_status.MANUAL;
+          }
+        if (previousValue == 1){
+            output_status.d = output_status.AUTO;
+          }
+      output_status.MANUAL:
+        segValue[14:10] = 5h0C;
+        segValue[9:5] = 5h013;
+        segValue[4:0] = 5h0E;
+        if(alu.out != outChecker){
+          segValue[14:10] = 5h0E;
+          segValue[9:5] = 5h010;
+          segValue[4:0] = 5h01;
+          }
+        if (nextValue == 1){
+            output_status.d = output_status.AUTO;
+          }
+        if (previousValue == 1){
+            output_status.d = output_status.OUT;
+          }
+      output_status.AUTO:
+        segValue[14:10] = 5h0A;
+        segValue[9:5] = 5h11;
+        segValue[4:0] = 5h12;
+        alu.alufn_signal = alufn_fsm.out;
+        out = alu.out;
+        alufn_signal = alufn_fsm.out;
+        if (nextValue == 1){
+            output_status.d = output_status.OUT;
+          }
+        if (previousValue == 1){
+            output_status.d = output_status.MANUAL;
+          }
+      default:
+        output_status.d = output_status.OUT;
+    }
+  }
+}
