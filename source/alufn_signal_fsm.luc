@@ -5,7 +5,7 @@ module alufn_signal_fsm(
   ) {
   
   .clk(clk){
-    fsm testAluFsm={ADD, SUB, AND, OR, XOR, A, SHL, SHR, SRA, CMPEQ, CMPLT, CMPLE, MUL, DIV, ERROR}; 
+    fsm testAluFsm={ADD, SUB, AND, OR, XOR, A, NAND, NOR, XNOR, NOTA, B, NOTB, SHL, SHR, SRA, CMPEQ, CMPLT, CMPLE, MUL, ERROR}; 
   }
 
   always {
@@ -23,18 +23,39 @@ module alufn_signal_fsm(
               testAluFsm.d = testAluFsm.SUB;
       testAluFsm.SUB : 
               out = b000001;
-              testAluFsm.d = testAluFsm.AND;      
+              testAluFsm.d = testAluFsm.MUL;
+      testAluFsm.MUL :
+              out = b000010;
+              testAluFsm.d = testAluFsm.AND;
       testAluFsm.AND : 
               out = b011000;
+              testAluFsm.d = testAluFsm.NAND;
+      testAluFsm.NAND:
+              out = b011001;
               testAluFsm.d = testAluFsm.OR;  
       testAluFsm.OR : 
               out = b011110;
+              testAluFsm.d = testAluFsm.NOR;
+      testAluFsm.NOR:
+              out = b011111;
               testAluFsm.d = testAluFsm.XOR;        
       testAluFsm.XOR : 
               out = b010110;
+              testAluFsm.d = testAluFsm.XNOR;
+      testAluFsm.XNOR:
+              out = b010111;
               testAluFsm.d = testAluFsm.A;        
       testAluFsm.A : 
               out = b011010;
+              testAluFsm.d = testAluFsm.NOTA;
+      testAluFsm.NOTA:
+              out = b011011;
+              testAluFsm.d = testAluFsm.B;
+      testAluFsm.B : 
+              out = b011100;
+              testAluFsm.d = testAluFsm.NOTB;
+      testAluFsm.NOTB:
+              out = b011101;
               testAluFsm.d = testAluFsm.SHL;        
       testAluFsm.SHL : 
               out = b100000;
@@ -53,9 +74,6 @@ module alufn_signal_fsm(
               testAluFsm.d = testAluFsm.CMPLE;        
       testAluFsm.CMPLE : 
               out = b110111;
-              testAluFsm.d = testAluFsm.MUL;
-      testAluFsm.MUL :
-              out = b000010;
               testAluFsm.d = testAluFsm.ERROR;
       testAluFsm.ERROR :
               out = b000100;

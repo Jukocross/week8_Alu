@@ -15,6 +15,7 @@ module input_fsm_4 (
     input [15:0] outChecker,
     output reg [14:0] segValue,
     output reg [5:0] alufn_signal,
+    output reg v,
     output reg [15:0] out
   );
   
@@ -29,6 +30,7 @@ module input_fsm_4 (
   
   wire [6-1:0] M_out_fsm_alufn_signal;
   wire [15-1:0] M_out_fsm_segValue;
+  wire [1-1:0] M_out_fsm_v;
   wire [16-1:0] M_out_fsm_out;
   reg [16-1:0] M_out_fsm_a;
   reg [16-1:0] M_out_fsm_b;
@@ -47,6 +49,7 @@ module input_fsm_4 (
     .previousValue(M_out_fsm_previousValue),
     .alufn_signal(M_out_fsm_alufn_signal),
     .segValue(M_out_fsm_segValue),
+    .v(M_out_fsm_v),
     .out(M_out_fsm_out)
   );
   localparam A_testInput = 2'd0;
@@ -84,6 +87,7 @@ module input_fsm_4 (
     M_out_fsm_outChecker = outChecker;
     M_out_fsm_nextValue = nextValue;
     M_out_fsm_previousValue = previousValue;
+    v = 1'h0;
     out = M_out_fsm_out;
     M_aluChecker_alufn_signal = M_register_singal_q;
     alufn_signal = M_register_singal_q;
@@ -164,12 +168,14 @@ module input_fsm_4 (
         M_aluChecker_alufn_signal = M_out_fsm_alufn_signal;
         segValue = M_out_fsm_segValue;
         alufn_signal = M_out_fsm_alufn_signal;
+        v = M_out_fsm_v;
         if (M_aluChecker_out == 1'h1) begin
           out = 16'h0000;
           alufn_signal = 6'h3f;
           segValue[10+4-:5] = 5'h0e;
           segValue[5+4-:5] = 5'h10;
           segValue[0+4-:5] = 5'h00;
+          v = 1'h0;
         end
         if (enterNext == 1'h1) begin
           M_testInput_d = A_testInput;

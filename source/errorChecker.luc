@@ -8,7 +8,7 @@ module errorChecker (
     
       b00:
         out = 0;
-        if (alufn_signal[3:1] != 3b000){
+        if (alufn_signal[3:2] != 2b00 || alufn_signal[1:0] == 2b11){
           out = 1;
           }
       b01:

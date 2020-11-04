@@ -9,9 +9,11 @@ module out_state_fsm (
     input previousValue,
     output alufn_signal[6],
     output segValue[15],
+    output v,
     output out[16]
   ) {
   alu alu;
+  checkForOverflow overflow;
   counter slowclock_fsm(#SIZE(1), #DIV(26), .clk(clk), .rst(rst));
   alufn_signal_fsm alufn_fsm(.clk(slowclock_fsm.value), .rst(rst));
   .clk(clk){
@@ -26,6 +28,11 @@ module out_state_fsm (
     output_status.d = output_status.q;
     segValue = 15h0000;
     alufn_signal = alufn_signal_input;
+    v = 0;
+    overflow.alufn_signal = alufn_signal_input;
+    if (overflow.out == 1){
+       v = alu.zvn[1];
+      }
     case(output_status.q){
       output_status.OUT:
         segValue[14:10] = 5h00;
@@ -59,6 +66,10 @@ module out_state_fsm (
         alu.alufn_signal = alufn_fsm.out;
         out = alu.out;
         alufn_signal = alufn_fsm.out;
+        overflow.alufn_signal = alufn_fsm.out;
+        if (overflow.out == 1){
+            v = alu.zvn[1];
+          }
         if (nextValue == 1){
             output_status.d = output_status.OUT;
           }

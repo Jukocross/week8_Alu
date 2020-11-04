@@ -17,8 +17,8 @@ module adderUnit (
       default: s = 16b0;
       }
     out = s;
-    z = ~|s;
-    n = s[15];
-    v = (a[15] & (b[15] ^ alufn_signal[0]) & !s[15]) | (!a[15] & !(b[15] ^ alufn_signal[0]) & s[15]);
+    z = ~|s;//All zeros
+    n = s[15];//negative
+    v = (a[15] & (b[15] ^ alufn_signal[0]) & !s[15]) | (!a[15] & !(b[15] ^ alufn_signal[0]) & s[15]);//overflow
   }
 }

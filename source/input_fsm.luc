@@ -9,6 +9,7 @@ module input_fsm(
     input outChecker[16],
     output segValue[15],
     output alufn_signal[6],
+    output v,
     output out[16]
   ) {
   errorChecker aluChecker;
@@ -39,6 +40,7 @@ module input_fsm(
     out_fsm.outChecker = outChecker;
     out_fsm.nextValue = nextValue;
     out_fsm.previousValue = previousValue;
+    v = 0;
     out = out_fsm.out;
     aluChecker.alufn_signal = register_singal.q;
     alufn_signal = register_singal.q;
@@ -115,12 +117,14 @@ module input_fsm(
               aluChecker.alufn_signal = out_fsm.alufn_signal;
               segValue = out_fsm.segValue;
               alufn_signal = out_fsm.alufn_signal;
+              v = out_fsm.v;
               if (aluChecker.out == 1){
               out = 16h0000;
               alufn_signal = 6b111111;
               segValue[14:10] = 5h0E;
               segValue[9:5] = 5h10;
               segValue[4:0] = 5h00;
+              v = 0;
           }
               if (enterNext == 1){
                 testInput.d = testInput.A;

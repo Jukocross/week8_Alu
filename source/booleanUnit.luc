@@ -8,15 +8,15 @@ module booleanUnit (
   always {
     case(alufn_signal[3:0]){
       b1000: out = a & b; //AND
-      b1001: out = !(a & b); //NAND
+      b1001: out = ~(a & b); //NAND
       b1110: out = a | b; //OR
-      b1111: out = !(a | b); //NOR
+      b1111: out = ~(a | b); //NOR
       b0110: out = a ^ b; //XOR
-      b0111: out = !(a ^ b); //XNOR
+      b0111: out = ~(a ^ b); //XNOR
       b1010: out = a; //A
-      b1011: out = !a; //~A
+      b1011: out = ~a; //~A
       b1100: out = b; //B
-      b1101: out = !b; //~B
+      b1101: out = ~b; //~B
       default:
         out = 32b0;
       }

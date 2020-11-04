@@ -52,6 +52,7 @@ module au_top_0 (
   );
   wire [15-1:0] M_system_fsm_segValue;
   wire [6-1:0] M_system_fsm_alufn_signal;
+  wire [1-1:0] M_system_fsm_v;
   wire [16-1:0] M_system_fsm_out;
   reg [1-1:0] M_system_fsm_oneInput;
   reg [1-1:0] M_system_fsm_zeroInput;
@@ -70,6 +71,7 @@ module au_top_0 (
     .outChecker(M_system_fsm_outChecker),
     .segValue(M_system_fsm_segValue),
     .alufn_signal(M_system_fsm_alufn_signal),
+    .v(M_system_fsm_v),
     .out(M_system_fsm_out)
   );
   
@@ -100,6 +102,7 @@ module au_top_0 (
     M_system_fsm_previousValue = M_buttons_previousValueInput;
     M_system_fsm_outChecker = outChecker;
     segValue = M_system_fsm_segValue;
+    io_led[16+7+0-:1] = M_system_fsm_v;
     io_led[16+0+5-:6] = M_system_fsm_alufn_signal;
     io_led[8+7-:8] = M_system_fsm_out[8+7-:8];
     io_led[0+7-:8] = M_system_fsm_out[0+7-:8];

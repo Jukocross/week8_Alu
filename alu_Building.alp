@@ -7,6 +7,7 @@
     <component>counter.luc</component>
     <src>booleanUnit.luc</src>
     <src>errorChecker.luc</src>
+    <src>checkForOverflow.luc</src>
     <src>compareUnit.luc</src>
     <src>adderUnit.luc</src>
     <src>alufn_signal_fsm.luc</src>
